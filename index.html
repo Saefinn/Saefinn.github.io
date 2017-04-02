@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="css/style.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Press+Start+2P|Quicksand|Revalia" rel="stylesheet">
+        <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script> 
+        
+    </head>
+    
+    <body ng-app="seppukuArts" ng-init="news_page=false;mummer_page=false;abeyance_page=true">
+        
+        <h1 id="title">Seppuku Arts</h1>
+        
+        <div id="navigation">
+            <ul>
+                <li><a href ng-click="news_page = true;mummer_page=false;abeyance_page=false">News</a></li>
+                <li><a href ng-click="news_page = false;mummer_page=false;abeyance_page=true">Abeyance</a></li>
+                <li><a href ng-click="mummer_page = true;news_page = false;abeyance_page=false">A Mummer's Tale</a></li>
+                <li><a href>About</a></li>
+            </ul>
+        </div>
+        <br>
+        
+        
+        <br>
+        <div id="hiddenbar"></div>
+        <div id="news_page" ng-show="news_page">
+            <news></news>
+        </div>
+        
+        <div id="mummer_page" ng-show="mummer_page">
+            <mummerstale ></mummerstale>
+        </div>
+        
+        <div id="abeyance_page" ng-show="abeyance_page">
+            <abeyance></abeyance>
+        </div>
+        
+        
+        <script src="vendor/angular.js" type="text/javascript"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/applicationController.js"></script>
+        <script src="js/directives/directive.js"></script>
+        
+    </body>
+    
+    
+</html>
