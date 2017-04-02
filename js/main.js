@@ -1,2 +1,2 @@
 /* global angular */
-angular.module("seppukuArts", []);
+var app = angular.module("seppukuArts", []);
